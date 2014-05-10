@@ -3,7 +3,7 @@ TOOL.Name			= "#Gyro-Pod"
 TOOL.Command		= nil
 TOOL.ConfigName		= ""
 TOOL.ent = {}
-TOOL.ClientConVar[ "model" ] = "models/Spacebuild/Nova/drone2.mdl"
+TOOL.ClientConVar[ "model" ] = "models/spacebuild/nova/drone2.mdl"
 
 if ( CLIENT ) then
 	language.Add( "Tool.gyropod_advanced.name", "DataSchmuck's Enhanced Gyro-Pod" )
@@ -89,7 +89,7 @@ if (SERVER) then
 		if not(IsValid(datagpod)) then return nil end
 		datagpod:SetAngles(Ang)
 		datagpod:SetPos(Pos)
-		datagpod:SetModel(Model)
+		datagpod:SetModel(string.lower(Model))
 		datagpod:Spawn()
 		datagpod:SetPlayer( pl )
 		local ttable = {

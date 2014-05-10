@@ -148,7 +148,7 @@ function ENT:SetPartType( type )
 	self.PD.TF 	= string.sub( type , 2)
 	self.PD.AT 	= table.Copy( self.PD.AT )
 	self.PD.Usable  = self.Cont.Usable and !self.PD.SD.IsShaft and !self.PD.SD.MFT
-	self.Entity:SetModel( self.PD.model )
+	self.Entity:SetModel( string.lower(self.PD.model) )
 	self.Entity:CheckSkin( self.Cont.Skin )
 end
 

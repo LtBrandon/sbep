@@ -487,7 +487,7 @@ function ENT:CalcPanelModel( PartNum )
 	
 	DMT = PMT[self.Size[1]]
 	local function SetLiftModel( n )
-		self:SetModel( DMT[ n ] )
+		self:SetModel( string.lower(DMT[ n ]) )
 	end
 	local S = self.ST.MATSum
 	local T = self.ST.MAT

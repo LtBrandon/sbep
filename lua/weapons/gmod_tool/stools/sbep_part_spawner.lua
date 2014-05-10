@@ -35,7 +35,7 @@ function TOOL:LeftClick(trace)
         SMBProp = ents.Create("prop_physics")
     end
 
-    SMBProp:SetModel(model)
+    SMBProp:SetModel(string.lower(model))
 
     local skincount = SMBProp:SkinCount()
     local skinnum = nil
@@ -123,7 +123,7 @@ function TOOL.BuildCPanel(panel)
 			for key, modelpath in pairs( models ) do
 				local icon = vgui.Create( "SpawnIcon", panel )
 				--icon:Dock( TOP )
-				icon:SetModel( modelpath )
+				icon:SetModel( string.lower(modelpath) )
 				icon:SetToolTip( modelpath )
 				icon.DoClick = function( panel )
 					

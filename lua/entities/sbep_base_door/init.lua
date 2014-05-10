@@ -175,7 +175,7 @@ function ENT:SetDoorType( strType , nClass )
 		return false 
 	end
 	self:SetDoorVars( strType , nClass )
-	self:SetModel( self.D.model )
+	self:SetModel( string.lower(self.D.model) )
 	self:GetSequenceData()
 	self:PhysicsInitialize()	
 	self:Close()

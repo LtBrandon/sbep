@@ -54,7 +54,7 @@ function TOOL:LeftClick( tr )
 	local pos = tr.HitPos
 
 	local DoorController = ents.Create( "sbep_base_door_controller" )
-	DoorController:SetModel( model )
+	DoorController:SetModel( string.lower(model) )
 	DoorController:SetSkin( ply:GetInfoNum( "sbep_door_skin", 0 ) )
 
 	DoorController:SetUsable( ply:GetInfoNum( "sbep_door_enableuse", 1 ) == 1 )
@@ -128,7 +128,7 @@ function TOOL.BuildCPanel( panel )
 			for key, modelpath in pairs( models ) do
 				local icon = vgui.Create( "SpawnIcon", panel )
 				--icon:Dock( TOP )
-				icon:SetModel( modelpath )
+				icon:SetModel( string.lower(modelpath) )
 				icon:SetToolTip( modelpath )
 				icon.DoClick = function( panel )
 					RunConsoleCommand( "sbep_door_model", modelpath )

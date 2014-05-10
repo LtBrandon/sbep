@@ -680,7 +680,7 @@ function TOOL:LeftClick( trace )
 			LiftSystem_SER = ents.Create( "sbep_elev_system" )
 			LiftSystem_SER:SetPos( startpos + Vector(0,0,4.65))
 			LiftSystem_SER:SetAngles( Angle(0,-90,0) )
-			LiftSystem_SER:SetModel( "models/SmallBridge/Elevators_Small/sbselevp3.mdl" )
+			LiftSystem_SER:SetModel( "models/smallbridge/elevators_small/sbselevp3.mdl" )
 			LiftSystem_SER.Skin = ply:GetInfoNum( "sbep_lift_designer_skin", 0 )
 			LiftSystem_SER:SetNWBool( "Sendable" , true )
 			LiftSystem_SER.PLY		= ply
